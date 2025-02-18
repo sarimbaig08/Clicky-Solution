@@ -13,6 +13,8 @@ import {
   CheckCircle2,
   Star,
 } from "lucide-react";
+import ClientReviews from "./Components/reviewSlider";
+import ContactForm from "./Components/contactForm";
 
 const services = [
   {
@@ -176,6 +178,20 @@ const projects = [
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
     category: "Digital Marketing",
     size: "large",
+  },
+  {
+    title: "EcoStore Platform",
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    category: "E-commerce",
+    size: "small",
+  },
+  {
+    title: "SocialBoost Campaign",
+    image:
+      "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    category: "Social Media",
+    size: "small",
   },
   {
     title: "EcoStore Platform",
@@ -454,25 +470,25 @@ function App() {
       description: "Brief description of Project Three.",
     },
     {
-      year: "2020",
+      year: "2023",
       image:
-        "https://i.pinimg.com/736x/8b/58/0a/8b580a4eb8fa34e6e1bd0047129b2529.jpg",
-      title: "Project Four",
-      description: "Brief description of Project Four.",
+        "https://i.pinimg.com/736x/82/02/99/820299860c517c8e1979b5f37d6f69e9.jpg",
+      title: "Project One",
+      description: "Brief description of Project One.",
     },
     {
-      year: "2019",
+      year: "2022",
       image:
-        "https://i.pinimg.com/736x/77/aa/dd/77aaddae827dcc268d6a85204fb70f0b.jpg",
-      title: "Project Five",
-      description: "Brief description of Project Five.",
+        "https://i.pinimg.com/736x/10/48/eb/1048ebdd4b94f1058c966f49dc4e0ff1.jpg",
+      title: "Project Two",
+      description: "Brief description of Project Two.",
     },
     {
-      year: "2018",
+      year: "2021",
       image:
-        "https://i.pinimg.com/736x/6e/d2/d9/6ed2d92b91d40001774b0e0adc43d163.jpg",
-      title: "Project Six",
-      description: "Brief description of Project Six.",
+        "https://i.pinimg.com/736x/03/38/c4/0338c4cb19d7d22de9a21de2e100c3db.jpg",
+      title: "Project Three",
+      description: "Brief description of Project Three.",
     },
   ]);
 
@@ -548,7 +564,7 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 bg-white">
+      {/* <section id="about" className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <FadeInWhenVisible>
@@ -578,7 +594,7 @@ function App() {
             </FadeInWhenVisible>
             <FadeInWhenVisible>
               <div className="grid grid-cols-6 grid-rows-6 gap-4">
-                {projects.map((project, index) => {
+                {projects.map((projects, index) => {
                   let className =
                     "overflow-hidden rounded-xl transition-transform duration-300 hover:scale-105";
 
@@ -603,15 +619,15 @@ function App() {
                     >
                       <div className="relative h-full group">
                         <img
-                          src={project.image}
-                          alt={project.title}
+                          src={projects.image}
+                          alt={projects.title}
                           className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#5F01D3]/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                           <h3 className="text-white font-semibold text-lg">
-                            {project.title}
+                            {projects.title}
                           </h3>
-                          <p className="text-white/80">{project.category}</p>
+                          <p className="text-white/80">{projects.category}</p>
                         </div>
                       </div>
                     </motion.div>
@@ -621,7 +637,7 @@ function App() {
             </FadeInWhenVisible>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Services Section */}
       <section id="services" className="py-20 px-4 bg-gray-50">
@@ -761,7 +777,8 @@ function App() {
           <TestimonialSlider />
         </div>
       </section>
-
+      {/* <ClientReviews /> */}
+      <ContactForm />
       {/* Footer */}
       <footer className="bg-[#1A1A1A] text-white py-12">
         <div className="max-w-7xl mx-auto px-4">
