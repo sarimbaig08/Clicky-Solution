@@ -15,6 +15,8 @@ import {
 } from "lucide-react";
 import ClientReviews from "./Components/reviewSlider";
 import ContactForm from "./Components/contactForm";
+import ReviewSlider from "./Components/reviewSlider";
+import CTASection from "./Components/ctaSection";
 
 const services = [
   {
@@ -767,7 +769,7 @@ function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 bg-gray-50">
+      {/* <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <FadeInWhenVisible>
             <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
@@ -776,8 +778,10 @@ function App() {
           </FadeInWhenVisible>
           <TestimonialSlider />
         </div>
-      </section>
+      </section> */}
       {/* <ClientReviews /> */}
+      <CTASection />
+      <ReviewSlider />
       <ContactForm />
       {/* Footer */}
       <footer className="bg-[#1A1A1A] text-white py-12">

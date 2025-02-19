@@ -27,36 +27,48 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form
-      ref={form}
-      onSubmit={sendEmail}
-      className="flex flex-col space-y-3 p-4 rounded-lg my-20 max-w-md mx-auto"
-    >
-      <label className="font-medium">Name</label>
-      <input
-        type="text"
-        name="user_name"
-        required
-        className="p-2 border rounded"
-      />
+    <>
+      <h1 className="text-4xl font-semibold text-center mt-10">
+        Have Any Query?
+      </h1>
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        className="flex flex-col space-y-3 p-4 rounded-lg mt-10 mb-20 max-w-2xl mx-auto"
+      >
+        <label className="font-semibold text-lg">Name</label>
+        <input
+          type="text"
+          name="user_name"
+          placeholder="Enter your name"
+          required
+          className="p-4 border rounded"
+        />
 
-      <label className="font-medium">Email</label>
-      <input
-        type="email"
-        name="user_email"
-        required
-        className="p-2 border rounded"
-      />
+        <label className="font-semibold text-lg">Email</label>
+        <input
+          type="email"
+          name="user_email"
+          placeholder="Enter your email"
+          required
+          className="p-4 border rounded"
+        />
 
-      <label className="font-medium">Message</label>
-      <textarea name="message" required className="p-2 border rounded h-24" />
+        <label className="font-semibold text-lg">Message</label>
+        <textarea
+          name="message"
+          required
+          className="p-4 border rounded h-24"
+          placeholder="Enter your query"
+        />
 
-      <input
-        type="submit"
-        value="Send"
-        className="bg-gradient-to-r from-[#5F01D3] to-[#FDD100] text-white py-2 rounded cursor-pointer hover:bg-blue-700 transition"
-      />
-    </form>
+        <input
+          type="submit"
+          value="Send"
+          className="bg-gradient-to-r from-[#5F01D3] to-[#FDD100] text-white py-4 rounded cursor-pointer hover:bg-blue-700 transition"
+        />
+      </form>
+    </>
   );
 };
 
