@@ -17,6 +17,13 @@ import ClientReviews from "./Components/reviewSlider";
 import ContactForm from "./Components/contactForm";
 import ReviewSlider from "./Components/reviewSlider";
 import CTASection from "./Components/ctaSection";
+import catWalkImg from "./assets/images/catWalk.jpeg";
+import dnaPerfumes from "./assets/images/dnaPerfume.jpeg";
+import shanAfzal from "./assets/images/shanAfzal.jpeg";
+import jeevaTextile from "./assets/images/jeevaTextiles.jpeg";
+import heNshe from "./assets/images/heNshe.jpeg";
+import fusionive from "./assets/images/fusionive.jpeg";
+import WhatsappBtn from "./Components/whatsappBtn";
 
 const services = [
   {
@@ -98,26 +105,27 @@ const services = [
   },
   {
     icon: <BarChart3 className="w-12 h-12" />,
-    title: "Sales Growth",
-    description: "Data-driven strategies to increase your sales and revenue",
+    title: "Seo",
+    description:
+      "Boost rankings, drive traffic, optimize content, and convert visitors effectively.",
     details:
-      "Our sales growth solutions combine CRM optimization, sales funnel development, and conversion rate optimization. We help you turn leads into loyal customers through proven methodologies.",
+      "Our SEO growth solutions focus on website optimization, content strategy, and conversion-driven SEO. We help you rank higher, drive organic traffic, and turn visitors into loyal customers with proven strategies .",
     steps: [
       {
-        title: "Sales Process Audit",
-        description: "Analyzing current sales performance",
+        title: "SEO Audit",
+        description: "Analyzing current website performance and rankings",
       },
       {
         title: "Strategy Development",
-        description: "Creating customized growth plans",
+        description: "Creating customized SEO plans for growth",
       },
       {
         title: "Implementation",
-        description: "Executing optimization strategies",
+        description: "Optimizing content, keywords, and technical SEO",
       },
       {
         title: "Performance Tracking",
-        description: "Monitoring KPIs and results",
+        description: "Monitoring rankings, traffic, and conversions",
       },
     ],
   },
@@ -148,66 +156,33 @@ const services = [
   },
   {
     icon: <ShoppingCart className="w-12 h-12" />,
-    title: "E-commerce Solutions",
-    description: "End-to-end e-commerce development and optimization",
+    title: "Shopify Growth Solutions",
+    description:
+      "Store optimization, conversion strategy, and performance marketing.",
     details:
-      "We build and optimize e-commerce platforms that drive sales. Our solutions include custom shopping carts, payment integration, inventory management, and conversion optimization.",
+      "Our Shopify growth solutions focus on store optimization, conversion strategy, and performance marketing. We help you enhance user experience, drive sales, and scale your business with proven strategies.",
     steps: [
       {
-        title: "Platform Selection",
-        description: "Choosing the right e-commerce solution",
+        title: "Store Audit",
+        description: "Analyzing current store performance and user experience.",
       },
       {
-        title: "Store Setup",
-        description: "Implementation and customization",
+        title: "Strategy Development",
+        description: "Creating customized Shopify growth plans.",
       },
       {
-        title: "Payment Integration",
-        description: "Secure payment gateway setup",
+        title: "Implementation",
+        description: "Optimizing design, product pages, and checkout process.",
       },
       {
-        title: "Launch & Optimization",
-        description: "Store launch and performance tuning",
+        title: "Performance Tracking",
+        description: "Monitoring sales, traffic, and conversions.",
+      },
+      {
+        title: "Customization & Optimization",
+        description: "Enhancing user experience, speed, and performance.",
       },
     ],
-  },
-];
-
-const projects = [
-  {
-    title: "TechCorp Rebrand",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    category: "Digital Marketing",
-    size: "large",
-  },
-  {
-    title: "EcoStore Platform",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    category: "E-commerce",
-    size: "small",
-  },
-  {
-    title: "SocialBoost Campaign",
-    image:
-      "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    category: "Social Media",
-    size: "small",
-  },
-  {
-    title: "EcoStore Platform",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    category: "E-commerce",
-    size: "small",
-  },
-  {
-    title: "SocialBoost Campaign",
-    image:
-      "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    category: "Social Media",
-    size: "small",
   },
 ];
 
@@ -238,38 +213,6 @@ const testimonials = [
     content:
       "Working with Clicky Solutions was a game-changer for our brand. Their innovative solutions and professional team delivered outstanding results.",
     rating: 5,
-  },
-];
-
-const timeline = [
-  {
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Company Founded",
-    description:
-      "Clicky Solutions was established with a vision to transform digital presence. Clicky Solutions was established with a vision to transform digital presence",
-  },
-  {
-    year: 2021,
-    title: "Service Expansion",
-    description:
-      "Added comprehensive digital marketing and social media services",
-  },
-  {
-    year: 2022,
-    title: "Team Growth",
-    description: "Expanded our team and opened new office location",
-  },
-  {
-    year: 2023,
-    title: "Global Reach",
-    description:
-      "Started serving international clients across multiple industries",
-  },
-  {
-    year: 2024,
-    title: "Innovation Leader",
-    description: "Recognized as industry leader in digital solutions",
   },
 ];
 
@@ -358,78 +301,16 @@ function ServiceModal({
             </div>
           </div>
 
-          <motion.button
+          {/* <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="w-full py-4 px-6 rounded-xl font-semibold text-white text-lg bg-gradient-to-r from-[#5F01D3] to-[#FDD100] hover:opacity-90 transition-opacity"
           >
             Get a Quote
-          </motion.button>
+          </motion.button> */}
         </div>
       </motion.div>
     </motion.div>
-  );
-}
-
-function TestimonialSlider() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
-  return (
-    <div className="relative overflow-hidden">
-      <div className="max-w-4xl mx-auto">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentIndex}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className="flex flex-col items-center text-center px-4"
-          >
-            <div className="w-20 h-20 mb-6 rounded-full overflow-hidden ring-4 ring-[#5F01D3]/20">
-              <img
-                src={testimonials[currentIndex].image}
-                alt={testimonials[currentIndex].name}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="flex gap-1 mb-4">
-              {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="w-5 h-5 fill-[#FDD100] text-[#FDD100]"
-                />
-              ))}
-            </div>
-            <p className="text-xl text-gray-700 mb-6 italic">
-              "{testimonials[currentIndex].content}"
-            </p>
-            <h4 className="font-semibold text-lg text-gray-900">
-              {testimonials[currentIndex].name}
-            </h4>
-            <p className="text-gray-600">{testimonials[currentIndex].role}</p>
-          </motion.div>
-        </AnimatePresence>
-      </div>
-      {/* <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-2 mb-4">
-        {testimonials.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full transition-all ${
-              index === currentIndex ? 'w-6 bg-[#5F01D3]' : 'bg-gray-300'
-            }`}
-          />
-        ))}
-      </div> */}
-    </div>
   );
 }
 
@@ -451,46 +332,45 @@ function App() {
 
   const [projects] = useState([
     {
-      year: "2023",
-      image:
-        "https://i.pinimg.com/736x/82/02/99/820299860c517c8e1979b5f37d6f69e9.jpg",
-      title: "Project One",
-      description: "Brief description of Project One.",
+      image: dnaPerfumes,
+      title: "DNA Perfume",
+      description:
+        "Experience luxury fragrances with premium, long-lasting scents.",
+      url: "https://dnaperfumo.com/",
     },
     {
-      year: "2022",
-      image:
-        "https://i.pinimg.com/736x/10/48/eb/1048ebdd4b94f1058c966f49dc4e0ff1.jpg",
-      title: "Project Two",
-      description: "Brief description of Project Two.",
+      image: catWalkImg,
+      title: "Catwalk",
+      description:
+        "Step into fashion with trendy, stylish, and comfortable footwear.",
+      url: "https://catwalkheel.com/",
     },
     {
-      year: "2021",
-      image:
-        "https://i.pinimg.com/736x/03/38/c4/0338c4cb19d7d22de9a21de2e100c3db.jpg",
-      title: "Project Three",
-      description: "Brief description of Project Three.",
+      image: shanAfzal,
+      title: "Shahnaz Afzal",
+      description:
+        "Elevate your wardrobe with premium, high-quality women's fashion.",
+      url: "https://shahnazafzal.com/",
     },
     {
-      year: "2023",
-      image:
-        "https://i.pinimg.com/736x/82/02/99/820299860c517c8e1979b5f37d6f69e9.jpg",
-      title: "Project One",
-      description: "Brief description of Project One.",
+      image: jeevaTextile,
+      title: "Jeeva Textiles",
+      description:
+        "Discover men’s premium apparel crafted for style and comfort.",
+      url: "https://jeevatextiles.com/",
     },
     {
-      year: "2022",
-      image:
-        "https://i.pinimg.com/736x/10/48/eb/1048ebdd4b94f1058c966f49dc4e0ff1.jpg",
-      title: "Project Two",
-      description: "Brief description of Project Two.",
+      image: heNshe,
+      title: "He & She Choice",
+      description: "Authentic beauty and skincare products for men and women.",
+      url: "https://cosmeticsmarts.com/",
     },
     {
-      year: "2021",
-      image:
-        "https://i.pinimg.com/736x/03/38/c4/0338c4cb19d7d22de9a21de2e100c3db.jpg",
-      title: "Project Three",
-      description: "Brief description of Project Three.",
+      image: fusionive,
+      title: "Fusionive",
+      description:
+        "Innovative fashion and lifestyle trends, redefining modern style.",
+      url: "https://www.instagram.com/fusionive/",
     },
   ]);
 
@@ -501,7 +381,7 @@ function App() {
         initial={{ y: 0 }}
         animate={{ y: isHeaderVisible ? 0 : -100 }}
         transition={{ duration: 0.3 }}
-        className="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm"
+        className="fixed w-full z-50 bg-white  shadow-sm"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
@@ -509,19 +389,28 @@ function App() {
               Clicky Solutions
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#about" className="text-gray-700 hover:text-[#5F01D3]">
-                About
+              <a
+                href="#home"
+                className="font-semibold text-gray-700 hover:text-[#5F01D3]"
+              >
+                Home
               </a>
               <a
                 href="#services"
-                className="text-gray-700 hover:text-[#5F01D3]"
+                className="font-semibold text-gray-700 hover:text-[#5F01D3]"
               >
                 Services
               </a>
-              <a href="#journey" className="text-gray-700 hover:text-[#5F01D3]">
-                Journey
+              <a
+                href="#ourProjects"
+                className="font-semibold text-gray-700 hover:text-[#5F01D3]"
+              >
+                Our Projects
               </a>
-              <a href="#contact" className="text-gray-700 hover:text-[#5F01D3]">
+              <a
+                href="#contactForm"
+                className="font-semibold text-gray-700 hover:text-[#5F01D3]"
+              >
                 Contact
               </a>
             </nav>
@@ -530,7 +419,7 @@ function App() {
       </motion.header>
 
       {/* Hero Section */}
-      <section className="min-h-screen relative overflow-hidden">
+      <section id="home" className="min-h-screen relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#5F01D3] via-purple-500 to-[#FDD100] opacity-90"></div>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center mix-blend-overlay"></div>
         <div className="relative min-h-screen flex flex-col items-center justify-center px-4">
@@ -547,99 +436,25 @@ function App() {
               We craft digital experiences that drive growth and success for
               your business
             </p>
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-white text-[#5F01D3] px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-colors"
             >
               Get Started
-            </motion.button>
+            </motion.button> */}
           </motion.div>
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="absolute bottom-10"
-          >
-            <ChevronDown className="w-8 h-8 text-white" />
-          </motion.div>
+          <a href="#services">
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="absolute bottom-10"
+            >
+              <ChevronDown className="w-8 h-8 text-white" />
+            </motion.div>
+          </a>
         </div>
       </section>
-
-      {/* About Section */}
-      {/* <section id="about" className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <FadeInWhenVisible>
-              <div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                  Transforming Businesses Through Digital Innovation
-                </h2>
-                <p className="text-lg text-gray-600 mb-6">
-                  At Clicky Solutions, we're passionate about helping businesses
-                  thrive in the digital age. Our team of experts combines
-                  creativity with technical expertise to deliver outstanding
-                  results.
-                </p>
-                <p className="text-lg text-gray-600 mb-8">
-                  With years of experience and a proven track record, we've
-                  helped numerous businesses achieve their digital goals and
-                  establish a strong online presence.
-                </p>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-[#5F01D3] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-colors"
-                >
-                  Learn More
-                </motion.button>
-              </div>
-            </FadeInWhenVisible>
-            <FadeInWhenVisible>
-              <div className="grid grid-cols-6 grid-rows-6 gap-4">
-                {projects.map((projects, index) => {
-                  let className =
-                    "overflow-hidden rounded-xl transition-transform duration-300 hover:scale-105";
-
-                  // Dynamic grid positioning based on size
-                  switch (index) {
-                    case 0: // Large project
-                      className += " col-span-4 row-span-4";
-                      break;
-                    case 1: // Small project
-                      className += " col-span-2 row-span-2";
-                      break;
-                    case 2: // Small project
-                      className += " col-span-2 row-span-2";
-                      break;
-                  }
-
-                  return (
-                    <motion.div
-                      key={index}
-                      className={className}
-                      whileHover={{ scale: 1.02 }}
-                    >
-                      <div className="relative h-full group">
-                        <img
-                          src={projects.image}
-                          alt={projects.title}
-                          className="w-full h-full object-cover"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#5F01D3]/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                          <h3 className="text-white font-semibold text-lg">
-                            {projects.title}
-                          </h3>
-                          <p className="text-white/80">{projects.category}</p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            </FadeInWhenVisible>
-          </div>
-        </div>
-      </section> */}
 
       {/* Services Section */}
       <section id="services" className="py-20 px-4 bg-gray-50">
@@ -678,56 +493,8 @@ function App() {
         </div>
       </section>
 
-      {/* Timeline Section */}
-      {/* <section id="journey" className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <FadeInWhenVisible>
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
-              Our Past Projects
-            </h2>
-          </FadeInWhenVisible>
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-[#5F01D3] to-[#FDD100]" />
-
-            {timeline.map((item, index) => (
-              <FadeInWhenVisible key={index}>
-                <div
-                  className={`flex items-center ${
-                    index % 2 === 0 ? "justify-end" : "justify-start"
-                  } mb-12 relative`}
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    className={`w-5/12 ${index % 2 === 0 ? "mr-12" : "ml-12"}`}
-                  >
-                    <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                      <span className="text-[#5F01D3] font-bold text-xl">
-                        {item.year}
-                      </span>
-                      <img src={item.image} alt="" />
-                      <h3 className="text-xl font-semibold text-gray-900 mt-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-600 mt-2">{item.description}</p>
-                      <motion.button
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        className="w-full py-2 mt-4 px-6 rounded-xl font-semibold text-white text-lg bg-gradient-to-r from-[#5F01D3] to-[#FDD100] hover:opacity-90 transition-opacity"
-                      >
-                        Get a Quote
-                      </motion.button>
-                    </div>
-                  </motion.div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#5F01D3] rounded-full shadow-lg" />
-                </div>
-              </FadeInWhenVisible>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 bg-white">
+      <section id="ourProjects" className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <FadeInWhenVisible>
             <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
@@ -738,47 +505,28 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <FadeInWhenVisible key={index}>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-white p-6 rounded-xl shadow-lg border border-gray-100"
-                >
-                  {/* <span className="text-[#5F01D3] font-bold text-xl">
-                    {project.year}
-                  </span> */}
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-40 object-cover rounded-md mt-2"
-                  />
-                  <h3 className="text-xl font-semibold text-gray-900 mt-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 mt-2">{project.description}</p>
-                  {/* <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full py-2 mt-4 px-6 rounded-xl font-semibold text-white text-lg bg-gradient-to-r from-[#5F01D3] to-[#8c4fd5] hover:opacity-90 transition-opacity"
+                <a href={project.url} target="_blank">
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    className="bg-white p-6 rounded-xl shadow-lg border border-gray-100"
                   >
-                    Get a Quote
-                  </motion.button> */}
-                </motion.div>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-40 object-cover rounded-md mt-2"
+                    />
+                    <h3 className="text-xl font-semibold text-gray-900 mt-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 mt-2">{project.description}</p>
+                  </motion.div>
+                </a>
               </FadeInWhenVisible>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      {/* <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <FadeInWhenVisible>
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
-              What Our Clients Say
-            </h2>
-          </FadeInWhenVisible>
-          <TestimonialSlider />
-        </div>
-      </section> */}
       {/* <ClientReviews /> */}
       <CTASection />
       <ReviewSlider />
@@ -819,17 +567,15 @@ function App() {
                 Company
               </h4>
               <ul className="space-y-2 text-gray-300">
+                <li className="hover:text-[#5F01D3] transition-colors">Home</li>
                 <li className="hover:text-[#5F01D3] transition-colors">
-                  About Us
+                  Services
                 </li>
                 <li className="hover:text-[#5F01D3] transition-colors">
-                  Our Journey
+                  Our Projects
                 </li>
                 <li className="hover:text-[#5F01D3] transition-colors">
-                  Careers
-                </li>
-                <li className="hover:text-[#5F01D3] transition-colors">
-                  Contact
+                  Contact us
                 </li>
               </ul>
             </div>
@@ -839,17 +585,18 @@ function App() {
               </h4>
               <ul className="space-y-2 text-gray-300">
                 <li>info@clickysolutions.com</li>
-                <li>+1 (555) 123-4567</li>
-                <li>123 Digital Street</li>
-                <li>Tech City, TC 12345</li>
+                <li>+92 307 1112852</li>
+                <li>Office no. 202 Anum State Block-B</li>
+                <li>Shahre-e-Faisal Karachi</li>
               </ul>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-300">
-            <p>&copy; 2024 Clicky Solutions. All rights reserved.</p>
+            <p>&copy; 2025 Clicky Solutions. All rights reserved.</p>
           </div>
         </div>
       </footer>
+      <WhatsappBtn />
     </div>
   );
 }

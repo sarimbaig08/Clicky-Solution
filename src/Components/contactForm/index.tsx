@@ -1,14 +1,15 @@
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const ContactForm: React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
+  const [isSending, setIsSending] = useState(false);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!form.current) return;
-
+    setIsSending(true);
     emailjs
       .sendForm("service_quusczd", "template_ytdx644", form.current, {
         publicKey: "duRH-41btJLBywkYz",
@@ -18,8 +19,10 @@ const ContactForm: React.FC = () => {
           console.log("SUCCESS!");
           alert("Email sent successfully!");
           form.current.reset(); // Reset form after successful submission
+          setIsSending(false);
         },
         (error) => {
+          setIsSending(false);
           console.log("FAILED...", error.text);
           alert("Email failed to send.");
         }
@@ -27,7 +30,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <>
+    <div id="contactForm">
       <h1 className="text-4xl font-semibold text-center mt-10">
         Have Any Query?
       </h1>
@@ -64,11 +67,16 @@ const ContactForm: React.FC = () => {
 
         <input
           type="submit"
-          value="Send"
-          className="bg-gradient-to-r from-[#5F01D3] to-[#FDD100] text-white py-4 rounded cursor-pointer hover:bg-blue-700 transition"
+          value={isSending ? "Sending..." : "Send"}
+          disabled={isSending ? true : false}
+          className=" text-white py-4 rounded cursor-pointer hover:bg-blue-700 transition"
+          style={{
+            background:
+              "linear-gradient(to right, #363531, rgb(29, 20, 47), rgb(50, 32, 91), rgb(71, 45, 140), rgb(6, 3, 16))",
+          }}
         />
       </form>
-    </>
+    </div>
   );
 };
 
